@@ -41,7 +41,7 @@
 				v2f simplevert(appdata v)
 				{
 					v2f o;
-					o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+					o.vertex = UnityObjectToClipPos(v.vertex);
 					o.uv = v.uv;
 					return o;
 				}
@@ -49,7 +49,7 @@
 				v2f vert(appdata v)
 				{
 					v2f o;
-					o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+					o.vertex = UnityObjectToClipPos(v.vertex);
 					o.uv = v.uv;
 					o.uv1 = v.uv;
 
