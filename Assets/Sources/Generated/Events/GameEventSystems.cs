@@ -9,10 +9,10 @@
 public sealed class GameEventSystems : Feature {
 
     public GameEventSystems(Contexts contexts) {
-        Add(new GameActiveEventSystem(contexts)); // priority: 0
-        Add(new GameActiveRemovedEventSystem(contexts)); // priority: 0
+        Add(new ActiveEventSystem(contexts)); // priority: 0
+        Add(new ActiveRemovedEventSystem(contexts)); // priority: 0
         Add(new DirectionEventSystem(contexts)); // priority: 0
-        Add(new GamePositionEventSystem(contexts)); // priority: 0
+        Add(new PositionEventSystem(contexts)); // priority: 0
         Add(new SortingLayerEventSystem(contexts)); // priority: 0
         Add(new SortingOrderEventSystem(contexts)); // priority: 0
         Add(new SpriteEventSystem(contexts)); // priority: 0

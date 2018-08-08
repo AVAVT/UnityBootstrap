@@ -42,8 +42,9 @@ public class ViewService : IViewService
     return viewController;
   }
 
-  public IViewController LoadGameAsset(Contexts contexts, IEntity entity, GameObject prefab, string parentTransformName = null)
+  public IViewController LoadGameAsset(Contexts contexts, IEntity entity, string parentTransformName = null)
   {
+    GameObject prefab = null; // TODO
     if (parentTransformName != null)
     {
       if (!parentTransformList.ContainsKey(parentTransformName))
@@ -60,8 +61,9 @@ public class ViewService : IViewService
     }
   }
 
-  public IViewController LoadHUDAsset(Contexts contexts, IEntity entity, GameObject prefab, bool isParent = false, string parentTransformName = null)
+  public IViewController LoadHUDAsset(Contexts contexts, IEntity entity, bool isParent = false, string parentTransformName = null)
   {
+    GameObject prefab = null; // TODO
     if (isParent)
     {
       HUDParentTransform = LoadAsset(contexts, entity, prefab).transform;
@@ -85,8 +87,9 @@ public class ViewService : IViewService
     }
   }
 
-  public IViewController LoadUIAsset(Contexts contexts, IEntity entity, GameObject prefab, bool isParent = false, string parentTransformName = null)
+  public IViewController LoadUIAsset(Contexts contexts, IEntity entity, bool isParent = false, string parentTransformName = null)
   {
+    GameObject prefab = null; // TODO
     if (isParent)
     {
       UIParentTransform = LoadAsset(contexts, entity, prefab).transform;

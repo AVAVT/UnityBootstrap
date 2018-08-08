@@ -20,27 +20,4 @@ public class GameBaseController : MonoBehaviour, IViewController
     gameObject.Unlink();
     Destroy(gameObject);
   }
-
-#if UNITY_EDITOR && DEBUG
-  public void PrintDebug()
-  {
-    Contexts.sharedInstance.meta.debugService.instance.PrintModificationHistory(gameEntity);
-  }
-#endif
 }
-
-#if UNITY_EDITOR && DEBUG
-[CustomEditor(typeof(GameBaseController), true)]
-public class GameDebugButtonEditor : Editor
-{
-  public override void OnInspectorGUI()
-  {
-    DrawDefaultInspector();
-
-    if (GUILayout.Button("Print Debug History"))
-    {
-      (target as GameBaseController).PrintDebug();
-    }
-  }
-}
-#endif

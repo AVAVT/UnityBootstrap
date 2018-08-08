@@ -9,14 +9,14 @@
 public static class GameComponentsLookup {
 
     public const int Active = 0;
-    public const int Destroyed = 1;
-    public const int Direction = 2;
-    public const int DirectionListener = 3;
-    public const int GameActiveListener = 4;
-    public const int GameActiveRemovedListener = 5;
-    public const int GamePositionListener = 6;
-    public const int Pause = 7;
-    public const int Position = 8;
+    public const int ActiveListener = 1;
+    public const int ActiveRemovedListener = 2;
+    public const int Destroyed = 3;
+    public const int Direction = 4;
+    public const int DirectionListener = 5;
+    public const int Pause = 6;
+    public const int Position = 7;
+    public const int PositionListener = 8;
     public const int SortingLayer = 9;
     public const int SortingLayerListener = 10;
     public const int SortingOrder = 11;
@@ -24,20 +24,21 @@ public static class GameComponentsLookup {
     public const int Sprite = 13;
     public const int SpriteListener = 14;
     public const int Time = 15;
-    public const int YBasedSortingOrder = 16;
+    public const int View = 16;
+    public const int YBasedSortingOrder = 17;
 
-    public const int TotalComponents = 17;
+    public const int TotalComponents = 18;
 
     public static readonly string[] componentNames = {
         "Active",
+        "ActiveListener",
+        "ActiveRemovedListener",
         "Destroyed",
         "Direction",
         "DirectionListener",
-        "GameActiveListener",
-        "GameActiveRemovedListener",
-        "GamePositionListener",
         "Pause",
         "Position",
+        "PositionListener",
         "SortingLayer",
         "SortingLayerListener",
         "SortingOrder",
@@ -45,19 +46,20 @@ public static class GameComponentsLookup {
         "Sprite",
         "SpriteListener",
         "Time",
+        "View",
         "YBasedSortingOrder"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(ActiveComponent),
+        typeof(ActiveListenerComponent),
+        typeof(ActiveRemovedListenerComponent),
         typeof(DestroyedComponent),
         typeof(DirectionComponent),
         typeof(DirectionListenerComponent),
-        typeof(GameActiveListenerComponent),
-        typeof(GameActiveRemovedListenerComponent),
-        typeof(GamePositionListenerComponent),
         typeof(PauseComponent),
         typeof(PositionComponent),
+        typeof(PositionListenerComponent),
         typeof(SortingLayerComponent),
         typeof(SortingLayerListenerComponent),
         typeof(SortingOrderComponent),
@@ -65,6 +67,7 @@ public static class GameComponentsLookup {
         typeof(SpriteComponent),
         typeof(SpriteListenerComponent),
         typeof(TimeComponent),
+        typeof(ViewComponent),
         typeof(YBasedSortingOrderComponent)
     };
 }
